@@ -1,0 +1,92 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - find_man
+  - inform
+  - subscribe
+  - inshebao
+  - find_shebao
+  - find_shebao_city
+  
+entities:
+  - city
+  - email
+  - GPE
+  
+slots:
+  city:
+    type: text
+  email:
+    type: text
+    influence_conversation: false
+    
+responses:
+  utter_greet:
+  - text: "嘿!你好吗?"
+
+  utter_cheer_up:
+  - text: "这有样东西能让你高兴起来:"
+
+  utter_did_that_help:
+  - text: "本次回答对您是否有帮助?"
+
+  utter_happy:
+  - text: "很好,继续!"
+
+  utter_goodbye:
+  - text: "再见"
+
+  utter_iamabot:
+  - text: "我是智能客服助理哦，不是人工客服."
+  
+  utter_please_rephrase:
+  - text: "抱歉，我暂时还没办法明白您的意思，麻烦您换个说法好吗？"
+  
+  utter_deny_wait:
+  - text: "少侠且慢，且听我一言."
+  
+  utter_find_man:
+  - text: "抱歉，暂未开通人工客服服务。"
+  
+  utter_ask_city:
+  - text: "请问您要查询哪个城市的社保？"
+  
+  utter_default:
+  - text: "对不起，我没听懂。能麻烦您改个方式提问吗？"
+  
+  utter_ask_email:
+  - text: |
+      请告诉我您的email地址
+      
+  utter_subscribed:
+  - text: |
+      请查看您的邮箱 {email} 中的邮件以完成订阅!
+  - text: 您已经订阅成功，详情可在您的邮箱 {email} 中查看.
+  
+  utter_showshebao:
+  - text: 暂未查询到您在 {city} 的社保缴费信息.
+    image: https://sm.ms/image/FBzrMk3ZmGeojHA
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- '...'
+- utter_greet
+- utter_subscribed
+
+forms:
+  newsletter_form:
+    email:
+    - type: from_text
+  shebao_form:
+    city:
+    - type: from_text

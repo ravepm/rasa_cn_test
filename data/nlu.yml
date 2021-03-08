@@ -1,0 +1,119 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - 你好
+    - 早上好
+    - 晚上好
+    - 亲
+    - 在吗
+    - 请问
+    - 有个问题
+    - 请教一下
+
+- intent: goodbye
+  examples: |
+    - 再见
+    - 拜拜
+    - 没有了
+    - 我走了
+
+- intent: affirm
+  examples: |
+    - 是的
+    - 好的
+    - 有
+    - 当然了
+    - 明白了
+
+- intent: deny
+  examples: |
+    - 没有
+    - 快滚
+    - 否
+    - 没帮助
+    - 没用
+    - 垃圾
+    - 废物
+
+- intent: mood_great
+  examples: |
+    - 完美
+    - 挺好的
+    - 还不错
+    - 还可以
+    - 还凑合
+    - 就那样
+    - 一般般
+    - 还行
+    - 开心
+    - 听高兴的
+    - 快乐
+
+- intent: mood_unhappy
+  examples: |
+    - 不好
+    - 伤心
+    - 难过
+    - 不开心
+    - 难受
+    - 失望
+    - 忧伤
+    - 不好过
+    - 很烦
+    - 生气
+    - 很气
+    - 太难了
+    - 心很累
+    - 挫折
+
+- intent: find_shebao
+  examples: |
+    - 我要查社保
+    - 社保
+    - 社会保险
+    - 漳州社保
+    - 社保缴费
+
+- intent: bot_challenge
+  examples: |
+    - 你是人吗
+    - 你是机器人吗
+    - 你是AI
+    - 你是人工吗
+    - 你是人工客服吗
+
+- intent: find_man
+  examples: |
+    - 我要找人工
+    - 转人工
+    - 人工
+    - 你是人工吗?
+    - 你是人工客服吗？
+    
+- intent: subscribe
+  examples: |
+    - 我要订阅新闻
+    - 订阅
+    - 更新时通知我
+    - 推送通知
+    - 订阅内容
+
+- intent: inform
+  examples: |
+    - 我的邮箱是example@example.com
+    - random@example.com
+    - 发送到 anything@example.com
+    - Email地址 something@example.com
+    
+- intent: inshebao
+  examples: |
+    - 漳州
+    - 福建漳州
+    - 查漳州的
+    - 查厦门的
+    - 查漳州的社保
